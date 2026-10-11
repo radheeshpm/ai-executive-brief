@@ -23,7 +23,7 @@ jobs:
       - name: Generate verified briefing
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: gemini-2.5-flash
+          GEMINI_MODEL: gemini-3.8-flash
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python generate_brief.py
       - name: Commit RSS update
