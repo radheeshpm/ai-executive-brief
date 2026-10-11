@@ -8,6 +8,7 @@ import json
 import os
 import re
 import sys
+import argparse
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
@@ -22,6 +23,7 @@ TZ = ZoneInfo('Asia/Kolkata')
 NOW = dt.datetime.now(dt.timezone.utc)
 LOCAL_DATE = NOW.astimezone(TZ).date()
 FEED_PATH = Path('rss.xml')
+BRIEFS_DIR = Path('briefs')
 REPO = os.getenv('GITHUB_REPOSITORY', 'radheeshpm/ai-executive-brief')
 OWNER, REPO_NAME = REPO.split('/', 1)
 BASE = f'https://{OWNER}.github.io/{REPO_NAME}'
@@ -170,6 +172,86 @@ def render(data, lookup):
     sections.append(f'<p>{html.escape(str(data.get("bottom_line", "")))}</p>')
     return '\n'.join(sections), list(dict.fromkeys(urls))
 
+def html_document(title, content, nav=''):
+    """Render a standalone, mobile-friendly page. Article HTML comes from our escaped renderer."""
+    return f'''<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b30">
+  <title>{html.escape(title)}</title>
+  <style>
+    :root {{ color-scheme: light; }}
+    * {{ box-sizing: border-box; }}
+    body {{ margin: 0; background: #f4f6fa; color: #172338; font: 16px/1.7 system-ui, -apple-system, Segoe UI, sans-serif; }}
+    header {{ background: #101b30; color: white; padding: 25px max(20px, calc((100vw - 850px)/2)); }}
+    header strong {{ font-size: 1.12rem; }}
+    header p {{ margin: 3px 0 0; color: #cbd5e1; font-size: .85rem; }}
+    main {{ max-width: 850px; margin: 24px auto; padding: 0 16px 40px; }}
+    article {{ background: white; border: 1px solid #e2e8f0; border-radius: 14px; padding: clamp(20px, 5vw, 42px); box-shadow: 0 4px 22px #1822380a; }}
+    h2 {{ margin-top: 0; line-height: 1.25; font-size: clamp(1.55rem, 4vw, 2.15rem); }}
+    h3 {{ margin-top: 2.2rem; border-top: 1px solid #e2e8f0; padding-top: 1.25rem; font-size: 1.25rem; }}
+    h4 {{ font-size: 1.08rem; line-height: 1.45; margin: 1.7rem 0 .65rem; }}
+    a {{ color: #135bb4; overflow-wrap: anywhere; }}
+    li {{ margin-bottom: .6rem; }}
+    p {{ margin: .7rem 0; }}
+    nav {{ margin-bottom: 16px; font-size: .95rem; }}
+    nav a {{ margin-right: 14px; }}
+    footer {{ max-width: 850px; margin: 0 auto 32px; padding: 0 20px; color: #657187; font-size: .85rem; }}
+  </style>
+</head>
+<body>
+<header><strong>AI Executive Intelligence Brief</strong><p>Enterprise AI · Security · Banking · Delivery</p></header>
+<main><nav>{nav}</nav><article>{content}</article></main>
+<footer>Compiled from public RSS headlines and summaries. Source claims are not independently verified. Analysis is editorial.</footer>
+</body>
+</html>
+'''
+
+
+def edition_filename(guid):
+    """Only accept our own date-based IDs, never arbitrary paths from XML."""
+    match = re.fullmatch(r'ai-executive-brief-(\d{4}-\d{2}-\d{2})', guid or '')
+    return f'{match.group(1)}.html' if match else None
+
+
+def rebuild_pages():
+    """Generate site from existing RSS, without calling Gemini or modifying the feed."""
+    if not FEED_PATH.exists():
+        raise RuntimeError('rss.xml does not exist')
+    root = ET.parse(FEED_PATH).getroot()
+    items = root.findall('./channel/item')
+    if not items:
+        raise RuntimeError('No RSS items found')
+    BRIEFS_DIR.mkdir(exist_ok=True)
+    editions = []
+    for item in items:
+        filename = edition_filename(item.findtext('guid', ''))
+        if not filename:
+            continue  # Ignore test items without a date-based GUID.
+        title = item.findtext('title', 'AI Executive Intelligence Brief')
+        body = item.findtext('description', '')
+        if not body:
+            continue
+        url = f'briefs/{filename}'
+        nav = f'<a href="../index.html">Latest briefing</a><a href="../rss.xml">RSS feed</a>'
+        (BRIEFS_DIR / filename).write_text(html_document(title, body, nav), encoding='utf-8')
+        editions.append((item.findtext('pubDate', ''), title, url, body))
+    if not editions:
+        raise RuntimeError('No dated RSS editions available for website')
+    # Sort by date-based URL, so old feeds are not dependent on XML ordering.
+    editions.sort(key=lambda e: e[2], reverse=True)
+    latest = editions[0]
+    archive = '<h3>Previous editions</h3><ul>' + ''.join(
+        f'<li><a href="{html.escape(url, quote=True)}">{html.escape(title)}</a></li>'
+        for _, title, url, _ in editions[1:]
+    ) + '</ul>' if len(editions) > 1 else ''
+    nav = f'<a href="{html.escape(latest[2], quote=True)}">Permanent link to latest edition</a><a href="rss.xml">RSS feed</a>'
+    Path('index.html').write_text(html_document(latest[1], latest[3] + archive, nav), encoding='utf-8')
+    print(f'Built index.html and {len(editions)} dated briefing pages')
+
+
 def publish(body, urls):
     if FEED_PATH.exists():
         root = ET.parse(FEED_PATH).getroot()
@@ -179,8 +261,7 @@ def publish(body, urls):
     else:
         root = ET.Element('rss', {'version': '2.0'})
         channel = ET.SubElement(root, 'channel')
-    # Normalize channel metadata and replace placeholder URLs.
-    for tag, val in [('title', 'AI Executive Intelligence Brief'), ('link', BASE + '/rss.xml'),
+    for tag, val in [('title', 'AI Executive Intelligence Brief'), ('link', BASE + '/'),
                      ('description', 'Daily sourced AI intelligence, enterprise and banking implications'),
                      ('language', 'en')]:
         elem = channel.find(tag)
@@ -188,17 +269,19 @@ def publish(body, urls):
             elem = ET.SubElement(channel, tag)
         elem.text = val
     guid = f'ai-executive-brief-{LOCAL_DATE.isoformat()}'
-    for old in channel.findall('item'):
-        if old.findtext('guid') == guid:
-            print('Today\'s edition already exists; skipping duplicate publication')
-            return
+    if any(old.findtext('guid') == guid for old in channel.findall('item')):
+        print("Today's edition already exists; preserving it and rebuilding website")
+        ET.indent(root, space='  ')
+        ET.ElementTree(root).write(FEED_PATH, encoding='utf-8', xml_declaration=True)
+        rebuild_pages()
+        return
     item = ET.Element('item')
     text_element(item, 'title', f'AI Executive Intelligence — {LOCAL_DATE:%d %B %Y}')
-    text_element(item, 'link', BASE + '/rss.xml')
-    text_element(item, 'guid', guid)
+    text_element(item, 'link', BASE + f'/briefs/{LOCAL_DATE.isoformat()}.html')
+    guid_element = ET.SubElement(item, 'guid', {'isPermaLink': 'false'})
+    guid_element.text = guid
     text_element(item, 'pubDate', email.utils.format_datetime(NOW))
     text_element(item, 'description', body)
-    # Private bookkeeping in RSS: retained for deduplication; ignored by readers.
     source_links = ET.SubElement(item, 'sourceLinks')
     for url in urls:
         text_element(source_links, 'link', url)
@@ -208,8 +291,15 @@ def publish(body, urls):
     ET.indent(root, space='  ')
     ET.ElementTree(root).write(FEED_PATH, encoding='utf-8', xml_declaration=True)
     print(f'Published {guid} with {len(urls)} cited source links')
+    rebuild_pages()
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--rebuild-pages', action='store_true', help='Build HTML pages from existing RSS without Gemini')
+    args = parser.parse_args()
+    if args.rebuild_pages:
+        rebuild_pages()
+        return
     if not os.getenv('GEMINI_API_KEY'):
         raise RuntimeError('GEMINI_API_KEY secret is missing')
     articles = gather()
