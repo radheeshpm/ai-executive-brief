@@ -1,0 +1,37 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>AI Executive Intelligence Brief</title>
+    <link>https://example.com</link>
+    <description>
+      Daily AI news, enterprise implications and banking insights.
+    </description>
+    <language>en</language>
+
+    <item>
+      <title>AI Executive Intelligence - Test Edition</title>
+      <link>https://example.com</link>
+      <guid isPermaLink="false">ai-brief-test-001</guid>
+      <description><![CDATA[
+        <h2>Executive Summary</h2>
+        <p>This is a test of the daily AI intelligence feed.</p>
+
+        <h2>AI Product Developments</h2>
+        <p>Future editions will cover OpenAI, Anthropic,
+        Google, Microsoft and AWS announcements.</p>
+
+        <h2>Agentic AI Risks</h2>
+        <p>Verified incidents, security implications
+        and recommended enterprise controls.</p>
+
+        <h2>Banking Implications</h2>
+        <p>Opportunities for financial institutions,
+        software engineering and technology delivery.</p>
+
+        <h2>Recommended Action</h2>
+        <p>One practical AI experiment or proposal per day.</p>
+      ]]></description>
+    </item>
+  </channel>
+</rss>
