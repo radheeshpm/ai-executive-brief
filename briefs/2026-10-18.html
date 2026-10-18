@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b30">
+  <title>AI Executive Intelligence — 18 October 2026</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f6fa; color: #172338; font: 16px/1.7 system-ui, -apple-system, Segoe UI, sans-serif; }
+    header { background: #101b30; color: white; padding: 25px max(20px, calc((100vw - 850px)/2)); }
+    header strong { font-size: 1.12rem; }
+    header p { margin: 3px 0 0; color: #cbd5e1; font-size: .85rem; }
+    main { max-width: 850px; margin: 24px auto; padding: 0 16px 40px; }
+    article { background: white; border: 1px solid #e2e8f0; border-radius: 14px; padding: clamp(20px, 5vw, 42px); box-shadow: 0 4px 22px #1822380a; }
+    h2 { margin-top: 0; line-height: 1.25; font-size: clamp(1.55rem, 4vw, 2.15rem); }
+    h3 { margin-top: 2.2rem; border-top: 1px solid #e2e8f0; padding-top: 1.25rem; font-size: 1.25rem; }
+    h4 { font-size: 1.08rem; line-height: 1.45; margin: 1.7rem 0 .65rem; }
+    a { color: #135bb4; overflow-wrap: anywhere; }
+    li { margin-bottom: .6rem; }
+    p { margin: .7rem 0; }
+    nav { margin-bottom: 16px; font-size: .95rem; }
+    nav a { margin-right: 14px; }
+    footer { max-width: 850px; margin: 0 auto 32px; padding: 0 20px; color: #657187; font-size: .85rem; }
+  </style>
+</head>
+<body>
+<header><strong>AI Executive Intelligence Brief</strong><p>Enterprise AI · Security · Banking · Delivery</p></header>
+<main><nav><a href="../index.html">Latest briefing</a><a href="../rss.xml">RSS feed</a></nav><article><h2>AI Executive Intelligence — 18 October 2026</h2>
+<p><em>Curated from dated public RSS items. Linked sources support the news claims; implications are editorial analysis. Headlines/snippets may not independently establish every claim.</em></p>
+<h3>60-second executive summary</h3><ul>
+<li>Developer platform alignments continue to shift as Replit replaces Anthropic Claude with OpenAI as its default model provider while maintaining multi-model access.</li>
+<li>Cloud supply-chain threats pose immediate exposure to enterprise tenants, demonstrated by an active credential compromise at ConnectWise Cloud Backup affecting 173 Microsoft 365 environments.</li>
+<li>Infrastructure isolation faces severe pressure following the disclosure of the &#x27;PwnEscape&#x27; Linux kernel flaw, which allows guest virtual machines to access host memory in shared cloud sandboxes.</li>
+</ul><h3>Key developments</h3>
+<h4>1. Replit Switches Default Model Provider from Anthropic to OpenAI</h4>
+<p><strong>What happened:</strong> According to TechCrunch AI, Replit CEO Amjad Masad clarified that OpenAI has replaced Anthropic as the developer platform&#x27;s default model provider, though Anthropic&#x27;s Claude will remain accessible to users.</p>
+<p><strong>Why it matters:</strong> The change underscores intense competition among frontier model developers for default positioning across major developer environments and code generation platforms.</p>
+<p><strong>Banking / delivery action:</strong> Audit internal enterprise developer toolchains to verify default foundation model endpoints and ensure third-party developer tool changes align with institutional data governance policies.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/">TechCrunch AI — 2026-10-17</a></p>
+<h4>2. Compromised ConnectWise Credential Abused to Breach 173 Microsoft 365 Tenants</h4>
+<p><strong>What happened:</strong> According to The Hacker News, security researchers reported that unidentified threat actors utilized a compromised Microsoft 365 credential belonging to ConnectWise Cloud Backup (formerly SkyKick) to gain unauthorized access to 173 customer M365 tenants.</p>
+<p><strong>Why it matters:</strong> Managed service provider (MSP) and backup integration credentials represent high-leverage third-party attack vectors capable of bypassing organizational perimeters at scale.</p>
+<p><strong>Banking / delivery action:</strong> Inventory all third-party backup integrations and cloud MSP service principals, immediately rotating legacy credentials and enforcing strict conditional access controls.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html">The Hacker News — 2026-10-17</a></p>
+<h4>3. MALFEX Supply Chain Campaign Infiltrates npm with &#x27;imgdecode&#x27; Loader</h4>
+<p><strong>What happened:</strong> According to The Hacker News, researchers discovered an npm package titled &#x27;imgdecode&#x27; that conceals a shellcode loader inside a Windows native addon, representing an active software supply-chain campaign dubbed MALFEX that accumulated 979 downloads.</p>
+<p><strong>Why it matters:</strong> Malicious dependencies containing native addons present severe risks to engineering workstations and automated build pipelines that execute arbitrary install scripts.</p>
+<p><strong>Banking / delivery action:</strong> Implement strict package registry firewalling and block newly registered or unverified open-source dependencies in enterprise developer continuous integration pipelines.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html">The Hacker News — 2026-10-17</a></p>
+<h4>4. Meta Revises Platform Language Following AI Web-Scraping Pushback</h4>
+<p><strong>What happened:</strong> According to TechCrunch AI, Meta updated its platform terms to eliminate contentious language regarding web scraping and AI training, with a spokesperson stating the update does not reflect a change in how Meta crawls the web.</p>
+<p><strong>Why it matters:</strong> Public and institutional scrutiny regarding automated content ingestion continues to compel foundation model operators to refine public terms and intellectual property disclosures.</p>
+<p><strong>Banking / delivery action:</strong> Review public-facing corporate website robots.txt configurations and bot-management rules to ensure crawler-access rules match the institution&#x27;s intellectual property and AI-training stance.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/">TechCrunch AI — 2026-10-17</a></p>
+<h4>5. Major Japanese Banking Consortium Completes Joint Stablecoin Settlement Trial</h4>
+<p><strong>What happened:</strong> According to Finextra, SMBC, Mizuho Bank, MUFG Bank, Mitsubishi UFJ Trust and Banking Corporation, and TISI Inc. announced the successful execution of a proof-of-concept conducted in July 2026 covering joint stablecoin issuance and cross-border settlement.</p>
+<p><strong>Why it matters:</strong> Tier-1 commercial institutions are validating shared stablecoin rails for international payments, reflecting growing maturity in regulated institutional digital asset infrastructure.</p>
+<p><strong>Banking / delivery action:</strong> Evaluate technical interoperability and regulatory implications of bank-issued multi-currency stablecoin rails against existing cross-border clearing networks.</p>
+<p><em>Evidence: Official announcement</em><br>Sources: 
+<a href="https://www.finextra.com/pressarticle/111311/japanese-banks-complete-stablecoin-poc?utm_medium=rssfinextra&amp;utm_source=finextrafeed">Finextra — 2026-10-16</a></p>
+<h4>6. PwnEscape Linux Kernel Flaw Enables Host Memory Access from Guest Virtual Machines</h4>
+<p><strong>What happened:</strong> According to The Hacker News, a critical Linux kernel vulnerability tracked as CVE-2026-99999 (&#x27;PwnEscape&#x27;) allows code inside a virtual machine to read host memory, demonstrated successfully against live cloud sandboxes.</p>
+<p><strong>Why it matters:</strong> The presence of host-read vulnerabilities in core kernel networking code directly threatens multi-tenant cloud environments and isolated execution platforms used for untrusted code execution.</p>
+<p><strong>Banking / delivery action:</strong> Ensure that AI sandboxes executing agentic workflows or untrusted user code operate on physically dedicated hardware nodes rather than shared virtualization clusters.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html">The Hacker News — 2026-10-15</a></p>
+<h3>Three things to watch</h3><ol>
+<li>Further tenant impact disclosures and forensic guidance regarding the ConnectWise Cloud Backup M365 breach.</li>
+<li>Hypervisor and cloud provider remediation patches for the CVE-2026-99999 Linux kernel PwnEscape vulnerability.</li>
+<li>Production commercialization milestones following the Japanese megabanks&#x27; joint stablecoin proof-of-concept.</li>
+</ol><h3>Experiment / proposal</h3>
+<p>Pilot automated CI/CD binary verification to detect and quarantine npm packages containing compiled native Windows or Linux addons before ingestion by development teams.</p>
+<h3>Bottom line</h3>
+<p>As AI developer workflows and multi-agent platforms scale, enterprise security must urgently harden third-party cloud integrations and low-level virtualization boundaries against supply-chain and memory-leak attacks.</p></article></main>
+<footer>Compiled from public RSS headlines and summaries. Source claims are not independently verified. Analysis is editorial.</footer>
+</body>
+</html>
