@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b30">
+  <title>AI Executive Intelligence — 25 October 2026</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f6fa; color: #172338; font: 16px/1.7 system-ui, -apple-system, Segoe UI, sans-serif; }
+    header { background: #101b30; color: white; padding: 25px max(20px, calc((100vw - 850px)/2)); }
+    header strong { font-size: 1.12rem; }
+    header p { margin: 3px 0 0; color: #cbd5e1; font-size: .85rem; }
+    main { max-width: 850px; margin: 24px auto; padding: 0 16px 40px; }
+    article { background: white; border: 1px solid #e2e8f0; border-radius: 14px; padding: clamp(20px, 5vw, 42px); box-shadow: 0 4px 22px #1822380a; }
+    h2 { margin-top: 0; line-height: 1.25; font-size: clamp(1.55rem, 4vw, 2.15rem); }
+    h3 { margin-top: 2.2rem; border-top: 1px solid #e2e8f0; padding-top: 1.25rem; font-size: 1.25rem; }
+    h4 { font-size: 1.08rem; line-height: 1.45; margin: 1.7rem 0 .65rem; }
+    a { color: #135bb4; overflow-wrap: anywhere; }
+    li { margin-bottom: .6rem; }
+    p { margin: .7rem 0; }
+    nav { margin-bottom: 16px; font-size: .95rem; }
+    nav a { margin-right: 14px; }
+    footer { max-width: 850px; margin: 0 auto 32px; padding: 0 20px; color: #657187; font-size: .85rem; }
+  </style>
+</head>
+<body>
+<header><strong>AI Executive Intelligence Brief</strong><p>Enterprise AI · Security · Banking · Delivery</p></header>
+<main><nav><a href="../index.html">Latest briefing</a><a href="../rss.xml">RSS feed</a></nav><article><h2>AI Executive Intelligence — 25 October 2026</h2>
+<p><em>Curated from dated public RSS items. Linked sources support the news claims; implications are editorial analysis. Headlines/snippets may not independently establish every claim.</em></p>
+<h3>60-second executive summary</h3><ul>
+<li>Critical software supply chain vulnerabilities have emerged across core AI and enterprise infrastructure, including an upstream memory-corruption bug in Google&#x27;s Brotli decoder and an exposed master key that compromised LiteLLM&#x27;s release pipeline.</li>
+<li>Data privacy and governance risks around consumer and enterprise AI integrations escalated as Google updated its privacy policies regarding Gemini and Search data usage for ads, while Meta was hit with a $25 billion court judgment over privacy violations.</li>
+<li>Hardware and edge operational risks expanded with reports of CISA adding actively exploited zero-days in Collabora Online and Arista VeloCloud to its KEV catalog, alongside attacks breaching firewalls and VPNs worldwide.</li>
+</ul><h3>Key developments</h3>
+<h4>1. LiteLLM Supply Chain Breach Hijacks Package Release via Leaked Master Key</h4>
+<p><strong>What happened:</strong> According to The Hacker News, LiteLLM disclosed that an Agent Platform master key accidentally committed to a public GitHub repository in May 2026 enabled an attacker to hijack its release pipeline and push a malicious version of the widely used Python package.</p>
+<p><strong>Why it matters:</strong> LiteLLM is a core orchestration component for many enterprise multi-model AI routing architectures. Compromised releases can lead directly to secret exfiltration, model traffic interception, and backend unauthorized access.</p>
+<p><strong>Banking / delivery action:</strong> Audit internal AI application dependencies immediately to identify and quarantine affected LiteLLM versions, verify checksums against official releases, and rotate all keys provisioned within AI gateways.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html">The Hacker News — 2026-10-24</a></p>
+<h4>2. Critical Memory Corruption Flaw in Brotli Decoder Threatens Node.js, Python, and Envoy</h4>
+<p><strong>What happened:</strong> Security researchers demonstrated remote code execution (dubbed Node2Shell) against official Node.js builds via CVE-2026-111497, a memory corruption vulnerability in Google&#x27;s Brotli decoder that also impacts Bun, Python packages, and Envoy proxies, according to The Hacker News.</p>
+<p><strong>Why it matters:</strong> Brotli decompression is ubiquitous across edge routers, API gateways, and web application stacks. A remotely exploitable buffer overwrite poses a widespread risk across internet-facing banking endpoints and microservices.</p>
+<p><strong>Banking / delivery action:</strong> Inventory perimeter Envoy proxies, API gateways, and Node.js/Python microservices handling Brotli compression to apply vendor updates or temporarily disable Brotli decompression where feasible.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html">The Hacker News — 2026-10-24</a> | <a href="https://thehackernews.com/2026/10/researchers-demonstrate-node2shell-rce.html">The Hacker News — 2026-10-23</a></p>
+<h4>3. Google Revises Privacy Policy Linking AI Search and Gemini Data to Targeted Ads</h4>
+<p><strong>What happened:</strong> According to The Hacker News, Google updated its privacy policy to state that using personalized AI features in Search or Gemini may permit the company to deliver targeted advertisements based on user activity across other connected Google services, including Gmail and Photos.</p>
+<p><strong>Why it matters:</strong> Enterprise staff using commercial accounts or personal browser sessions linked with Gemini could inadvertently feed cross-application business data into ad-targeting mechanisms, violating enterprise data minimization policies.</p>
+<p><strong>Banking / delivery action:</strong> Re-evaluate corporate policies regarding employee access to Google Gemini and personal Google accounts on enterprise devices, enforcing strict enterprise-tenant configurations where ad-profiling is contractually disabled.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html">The Hacker News — 2026-10-24</a></p>
+<h4>4. CISA Adds Actively Exploited Collabora Online and Arista VeloCloud Zero-Days to KEV Catalog</h4>
+<p><strong>What happened:</strong> The U.S. CISA added two actively exploited vulnerabilities to its Known Exploited Vulnerabilities catalog: CVE-2026-110447 in Collabora Online Built-in CODE Server and an Arista VeloCloud Orchestrator SQL injection flaw that allows authenticated users with read-only accounts to escalate to operator privileges, according to reports.</p>
+<p><strong>Why it matters:</strong> SD-WAN orchestrators and document servers are prime network ingress and control vectors. Privilege escalation on VeloCloud Orchestrator grants threat actors centralized control over branch network routing.</p>
+<p><strong>Banking / delivery action:</strong> Check bank branch SD-WAN infrastructure for exposed Arista VeloCloud management consoles, enforce strict network segregation, and patch both VeloCloud and Collabora installations immediately.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html">The Hacker News — 2026-10-24</a> | <a href="https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html">The Hacker News — 2026-10-22</a></p>
+<h4>5. Mass Compromise of Enterprise Firewalls and VPNs Exposes Over 70,000 Credentials</h4>
+<p><strong>What happened:</strong> According to The Hacker News, cybersecurity researchers reported a large-scale campaign targeting network perimeter appliances, including Fortinet FortiGate and Palo Alto Networks GlobalProtect appliances, leaking more than 70,000 enterprise credentials worldwide.</p>
+<p><strong>Why it matters:</strong> Edge device compromises bypass standard network perimeters, offering attackers direct internal access to corporate networks and critical banking infrastructure.</p>
+<p><strong>Banking / delivery action:</strong> Enforce immediate credential resets for all remote access VPN users, mandate hardware token MFA for VPN logons, and audit edge firewalls for unauthorized configuration alterations.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html">The Hacker News — 2026-10-23</a></p>
+<h4>6. Study Shows Significant Political Divergence Between Grok and OpenAI Models</h4>
+<p><strong>What happened:</strong> TechCrunch reported on a study revealing that xAI&#x27;s Grok and OpenAI&#x27;s GPT models disagreed on over 90% of nearly 500 election races when forced to choose candidates, with Grok favoring Republicans and OpenAI favoring Democrats.</p>
+<p><strong>Why it matters:</strong> Such divergence underscores systemic latent biases within commercial foundational models, posing reputational, compliance, and neutrality challenges when generative AI is deployed in customer-facing financial advice or automated content generation.</p>
+<p><strong>Banking / delivery action:</strong> Institute rigorous neutrality, explainability, and bias benchmarks for customer-facing LLM applications, ensuring guardrails prevent models from offering subjective judgments in regulated advisory workflows.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/">TechCrunch AI — 2026-10-24</a></p>
+<h4>7. Court Fines Meta $25 Billion Following Historic Privacy Lawsuit</h4>
+<p><strong>What happened:</strong> A New Mexico state court ordered Meta to pay $25 billion in penalties following findings of 43 million data privacy violations stemming from the 2018 Cambridge Analytica data scandal, according to The Hacker News citing major news outlets.</p>
+<p><strong>Why it matters:</strong> The massive penalty underscores escalating judicial and regulatory penalties for user data mismanagement and third-party data-sharing practices.</p>
+<p><strong>Banking / delivery action:</strong> Review institutional third-party data-sharing agreements and audit tracking pixel/SDK usage across digital banking applications to ensure compliance with strict privacy standards.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html">The Hacker News — 2026-10-22</a></p>
+<h3>Three things to watch</h3><ol>
+<li>Weaponization of the Node2Shell Brotli decoder exploit across web application frameworks and proxies.</li>
+<li>Upstream distribution of malicious packages targeting AI utility libraries following the LiteLLM compromise.</li>
+<li>Regulatory scrutiny on corporate cloud resilience and customer data consent in consumer AI tooling.</li>
+</ol><h3>Experiment / proposal</h3>
+<p>Pilot an automated Software Bill of Materials (SBOM) scanner across all AI application stacks to detect compromised open-source orchestration libraries and dependencies like LiteLLM before deployment to production environments.</p>
+<h3>Bottom line</h3>
+<p>Recent disclosures emphasize that the biggest vulnerabilities in enterprise AI continue to stem from classic software supply chain lapses, exposed infrastructure credentials, and expanding data-privacy boundaries.</p></article></main>
+<footer>Compiled from public RSS headlines and summaries. Source claims are not independently verified. Analysis is editorial.</footer>
+</body>
+</html>
