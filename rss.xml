@@ -2,6 +2,76 @@
 <rss version="2.0">
   <channel>
     <item>
+      <title>AI Executive Intelligence — 14 November 2026</title>
+      <link>https://radheeshpm.github.io/ai-executive-brief/briefs/2026-11-14.html</link>
+      <guid isPermaLink="false">ai-executive-brief-2026-11-14</guid>
+      <pubDate>Sat, 14 Nov 2026 08:05:14 +0000</pubDate>
+      <description>&lt;h2&gt;AI Executive Intelligence — 14 November 2026&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Curated from dated public RSS items. Linked sources support the news claims; implications are editorial analysis. Headlines/snippets may not independently establish every claim.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;60-second executive summary&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Autonomous agent transactions are shifting rapidly into production, punctuated by OpenAI&amp;#x27;s launch of ChatGPT Wallet and countervailing merchant and anti-fraud restrictions from players like Feedzai and United Airlines.&lt;/li&gt;
+&lt;li&gt;Offensive AI tradecraft is escalating as Amazon Threat Intelligence observed threat actors deploying autonomous ARTEX agent frameworks against cloud decoys, while the FBI reported over $400 million in crypto stolen via deepfake video calls.&lt;/li&gt;
+&lt;li&gt;Confidential computing models face architectural scrutiny following disclosures of Mior and Skyfall host-level exploits against AMD SEV-SNP virtual machines.&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Key developments&lt;/h3&gt;
+&lt;h4&gt;1. OpenAI Launches ChatGPT Wallet to Enable Autonomous Agent Checkout&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;What happened:&lt;/strong&gt; OpenAI officially introduced ChatGPT Wallet, allowing AI agents across ChatGPT Work, Codex, and dots to execute purchases on behalf of users with user authorization while keeping payment card details obscured, according to OpenAI and reports by Finextra and TechCrunch. Initial availability is rolling out as a limited deployment for U.S. Pro subscribers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enabling programmatic checkout workflows transforms frontier models from advisory engines into direct transacting principals, forcing changes to standard digital payments, card-not-present fraud filters, and checkout handshakes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Banking / delivery action:&lt;/strong&gt; Review payment gateway authentication rules to support agentic delegated checkout tokens and evaluate risk models for transactions initiated by non-human interfaces.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Evidence: Official announcement&lt;/em&gt;&lt;br&gt;Sources: 
+&lt;a href="https://www.finextra.com/newsarticle/48759/openai-launches-chatgpt-wallet?utm_medium=rssfinextra&amp;amp;utm_source=finextrafeed"&gt;Finextra — 2026-11-13&lt;/a&gt; | &lt;a href="https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"&gt;TechCrunch AI — 2026-11-13&lt;/a&gt; | &lt;a href="https://openai.com/index/introducing-chatgpt-wallet"&gt;OpenAI — 2026-11-13&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;2. Amazon Threat Intelligence Detects Active Cybercrime Campaigns Run by Autonomous AI Agents&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;What happened:&lt;/strong&gt; According to AWS Security, Amazon Threat Intelligence captured malicious activity between October 3 and November 5, 2026, where threat actors operated offensive campaigns using ARTEX, an open-source agentic penetration testing framework. Decoy sensors across Amazon&amp;#x27;s MadPot network intercepted requests that included agent operating memory targeting simulated enterprise services.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; This represents confirmed wild deployment of multi-step, autonomous agentic tool use by cybercriminals, automating scanning, memory management, and exploitation sequences without continuous human supervision.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Banking / delivery action:&lt;/strong&gt; Update Security Operations Center (SOC) runbooks to recognize programmatic, memory-driven multi-step agent attack patterns and simulate agentic red-team attacks against outward-facing APIs.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Evidence: Official announcement&lt;/em&gt;&lt;br&gt;Sources: 
+&lt;a href="https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/"&gt;AWS Security — 2026-11-13&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;3. Banks and Travel Operators Counter Autonomous Agents as Feedzai and United Limit Bot Access&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;What happened:&lt;/strong&gt; According to Finextra, Feedzai expanded its Digital Trust platform to help financial institutions identify AI agents attempting to log into and operate customer accounts, while Wirex unveiled Navoka, an agent capable of making payments from a dedicated account and card. In parallel, TechCrunch reported that United Airlines barred customer AI agents from booking reservations, citing cybersecurity concerns.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; A sharp divergence is emerging between protocols empowering agent financial agency and defensive perimeters blocking headless software from critical transactional interfaces.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Banking / delivery action:&lt;/strong&gt; Deploy bot and behavioral biometrics detection to classify whether mobile or web banking sessions originate from authorized account holders or delegated third-party autonomous agents.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Evidence: Reported&lt;/em&gt;&lt;br&gt;Sources: 
+&lt;a href="https://www.finextra.com/pressarticle/111665/wirex-launches-navoka-an-ai-agent-that-pays-from-its-own-bank-account-and-card?utm_medium=rssfinextra&amp;amp;utm_source=finextrafeed"&gt;Finextra — 2026-11-13&lt;/a&gt; | &lt;a href="https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/"&gt;TechCrunch AI — 2026-11-12&lt;/a&gt; | &lt;a href="https://www.finextra.com/pressarticle/111662/feedzai-helps-banks-detect-ai-agents-accessing-customer-accounts?utm_medium=rssfinextra&amp;amp;utm_source=finextrafeed"&gt;Finextra — 2026-11-12&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;4. Mior and Skyfall Exploits Compromise AMD SEV-SNP Confidential Computing Environments&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;What happened:&lt;/strong&gt; According to The Hacker News, researchers revealed two vulnerabilities—termed Mior and Skyfall—enabling rogue cloud operators with hypervisor control (and BIOS access in Mior&amp;#x27;s case) to access memory and tamper with signed execution reports inside AMD SEV-SNP confidential virtual machines.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Regulated institutions heavily rely on hardware-enforced trusted execution environments (TEEs) to protect proprietary AI model weights, training data, and customer records during multi-tenant cloud processing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Banking / delivery action:&lt;/strong&gt; Assess cloud vendor hardware configurations for AMD SEV-SNP instances hosting sensitive AI workloads and require attestation verification updates from infrastructure providers.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Evidence: Reported&lt;/em&gt;&lt;br&gt;Sources: 
+&lt;a href="https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html"&gt;The Hacker News — 2026-11-13&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;5. FBI Links North Korean Deepfake Video Call Campaign to Over $400 Million in Thefts&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;What happened:&lt;/strong&gt; According to an announcement covered by The Hacker News, the FBI revealed that North Korea-linked actors stole more than $400 million in cryptocurrency over 18 months via &amp;#x27;FaceStealer&amp;#x27;, an elaborate social engineering scheme employing real-time deepfake video calls.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Real-time synthetic audio-visual impersonation has progressed past low-level identity fraud to high-value executive impersonation that bypasses standard visual and vocal verification hurdles.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Banking / delivery action:&lt;/strong&gt; Mandate out-of-band cryptographic confirmation and hardware token verification for all high-value fund movements, eliminating video calls as an acceptable sole approval factor.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Evidence: Reported&lt;/em&gt;&lt;br&gt;Sources: 
+&lt;a href="https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html"&gt;The Hacker News — 2026-11-13&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;6. AWS Introduces Bedrock AgentCore Runtime V2 for Fast, Hardware-Isolated Execution&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;What happened:&lt;/strong&gt; AWS announced the next-generation Amazon Bedrock AgentCore runtime V2, delivering hardware-isolated sessions, usage-based compute billing, and snapshot-and-restore architecture designed to decouple session initialization latency from container image size.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise multi-agent architectures require strict process and data isolation boundaries to prevent state leakage or unauthorized lateral tool access across multi-tenant sessions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Banking / delivery action:&lt;/strong&gt; Evaluate AgentCore V2 architectures for internal agent pilots to enforce container-level data boundaries between client sessions and reduce cold-start execution delays.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Evidence: Official announcement&lt;/em&gt;&lt;br&gt;Sources: 
+&lt;a href="https://aws.amazon.com/blogs/machine-learning/architecture-patterns-for-fast-session-startup-on-amazon-bedrock-agentcore-runtime/"&gt;AWS ML — 2026-11-13&lt;/a&gt; | &lt;a href="https://aws.amazon.com/blogs/machine-learning/run-agents-securely-and-efficiently-with-the-next-generation-agentcore-runtime/"&gt;AWS ML — 2026-11-12&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Three things to watch&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Emergence of industry authorization standards governing agent-delegated credit card and account payments.&lt;/li&gt;
+&lt;li&gt;Hardware security vendor advisories and hypervisor patches mitigating AMD SEV-SNP memory exposure vulnerabilities.&lt;/li&gt;
+&lt;li&gt;Enterprise adoption trends of Agent-to-Agent (A2A) and Model Context Protocol (MCP) gateways with fine-grained access policies.&lt;/li&gt;
+&lt;/ol&gt;&lt;h3&gt;Experiment / proposal&lt;/h3&gt;
+&lt;p&gt;Pilot automated agent-detection telemetry in sandbox customer portals to identify anomalous session characteristics typical of headless AI browsers and agent frameworks.&lt;/p&gt;
+&lt;h3&gt;Bottom line&lt;/h3&gt;
+&lt;p&gt;As autonomous AI agents rapidly obtain spending privileges and cyber attackers adopt agentic toolkits, financial enterprises must urgently pivot their security perimeters to distinguish legitimate machine delegates from autonomous threats.&lt;/p&gt;</description>
+      <sourceLinks>
+        <link>https://www.finextra.com/newsarticle/48759/openai-launches-chatgpt-wallet?utm_medium=rssfinextra&amp;utm_source=finextrafeed</link>
+        <link>https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/</link>
+        <link>https://openai.com/index/introducing-chatgpt-wallet</link>
+        <link>https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/</link>
+        <link>https://www.finextra.com/pressarticle/111665/wirex-launches-navoka-an-ai-agent-that-pays-from-its-own-bank-account-and-card?utm_medium=rssfinextra&amp;utm_source=finextrafeed</link>
+        <link>https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/</link>
+        <link>https://www.finextra.com/pressarticle/111662/feedzai-helps-banks-detect-ai-agents-accessing-customer-accounts?utm_medium=rssfinextra&amp;utm_source=finextrafeed</link>
+        <link>https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html</link>
+        <link>https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html</link>
+        <link>https://aws.amazon.com/blogs/machine-learning/architecture-patterns-for-fast-session-startup-on-amazon-bedrock-agentcore-runtime/</link>
+        <link>https://aws.amazon.com/blogs/machine-learning/run-agents-securely-and-efficiently-with-the-next-generation-agentcore-runtime/</link>
+      </sourceLinks>
+    </item>
+    <item>
       <title>AI Executive Intelligence — 11 November 2026</title>
       <link>https://radheeshpm.github.io/ai-executive-brief/briefs/2026-11-11.html</link>
       <guid isPermaLink="false">ai-executive-brief-2026-11-11</guid>
