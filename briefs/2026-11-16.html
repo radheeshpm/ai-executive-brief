@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b30">
+  <title>AI Executive Intelligence — 16 November 2026</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f6fa; color: #172338; font: 16px/1.7 system-ui, -apple-system, Segoe UI, sans-serif; }
+    header { background: #101b30; color: white; padding: 25px max(20px, calc((100vw - 850px)/2)); }
+    header strong { font-size: 1.12rem; }
+    header p { margin: 3px 0 0; color: #cbd5e1; font-size: .85rem; }
+    main { max-width: 850px; margin: 24px auto; padding: 0 16px 40px; }
+    article { background: white; border: 1px solid #e2e8f0; border-radius: 14px; padding: clamp(20px, 5vw, 42px); box-shadow: 0 4px 22px #1822380a; }
+    h2 { margin-top: 0; line-height: 1.25; font-size: clamp(1.55rem, 4vw, 2.15rem); }
+    h3 { margin-top: 2.2rem; border-top: 1px solid #e2e8f0; padding-top: 1.25rem; font-size: 1.25rem; }
+    h4 { font-size: 1.08rem; line-height: 1.45; margin: 1.7rem 0 .65rem; }
+    a { color: #135bb4; overflow-wrap: anywhere; }
+    li { margin-bottom: .6rem; }
+    p { margin: .7rem 0; }
+    nav { margin-bottom: 16px; font-size: .95rem; }
+    nav a { margin-right: 14px; }
+    footer { max-width: 850px; margin: 0 auto 32px; padding: 0 20px; color: #657187; font-size: .85rem; }
+  </style>
+</head>
+<body>
+<header><strong>AI Executive Intelligence Brief</strong><p>Enterprise AI · Security · Banking · Delivery</p></header>
+<main><nav><a href="../index.html">Latest briefing</a><a href="../rss.xml">RSS feed</a></nav><article><h2>AI Executive Intelligence — 16 November 2026</h2>
+<p><em>Curated from dated public RSS items. Linked sources support the news claims; implications are editorial analysis. Headlines/snippets may not independently establish every claim.</em></p>
+<h3>60-second executive summary</h3><ul>
+<li>Autonomous offensive AI agents have been detected actively exploiting internet-exposed AI infrastructure such as LiteLLM and Dify to harvest and recycle API keys.</li>
+<li>Supply chain vulnerabilities in AI developer environments intensified following the compromise of Cursor&#x27;s Claude Code extension via an exposed third-party vendor credential.</li>
+<li>Nvidia faces major corporate and geopolitical fallout following CEO Jensen Huang&#x27;s resignation, triggering Congressional inquiries and raising concerns across the AI venture ecosystem.</li>
+</ul><h3>Key developments</h3>
+<h4>1. Amazon Threat Intelligence Detects Autonomous AI Agents Harvesting API Keys</h4>
+<p><strong>What happened:</strong> According to The Hacker News, Amazon&#x27;s threat intelligence team discovered an offensive campaign where threat actors deployed autonomous AI agents to scan internet-exposed AI applications—including LiteLLM, One API, and Dify—for stored API provider keys. Captured server records revealed that stolen credentials were automatically recycled by the agents to power further reconnaissance.</p>
+<p><strong>Why it matters:</strong> Demonstrates an escalation to recursive, self-sustaining AI agent attacks directly targeting AI middleware and credential stores across enterprise cloud environments.</p>
+<p><strong>Banking / delivery action:</strong> Conduct immediate external perimeter scans for exposed AI proxy services, enforce secret management vaults rather than environment variables, and apply automated key revocation policies upon anomalous usage spikes.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html">The Hacker News — 2026-11-16</a></p>
+<h4>2. Stolen Fireworks AI Credential Leads to Compromised Claude Code Extension in Cursor</h4>
+<p><strong>What happened:</strong> According to The Hacker News, Cursor confirmed that an attacker compromised Anthropic&#x27;s official Claude Code extension on the Cursor marketplace after obtaining an access key exposed by Fireworks AI. The threat actor used the key to exfiltrate data from a read-only environment.</p>
+<p><strong>Why it matters:</strong> Highlights critical supply-chain risks in developer tooling, where third-party credential leakage directly compromises developer IDE plugins and model integration channels.</p>
+<p><strong>Banking / delivery action:</strong> Restrict developer IDEs to approved, internally signed extension registries and audit enterprise third-party API token permissions given to external model hosting platforms.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html">The Hacker News — 2026-11-15</a></p>
+<h4>3. OpenAI Unveils Science Blog and Cites GPT-6 Astra Physics Proof</h4>
+<p><strong>What happened:</strong> OpenAI announced the launch of a dedicated science blog to highlight AI-driven research. In an introductory post, OpenAI stated that GPT-6 Astra helped researchers formalize a candidate nonperturbative lattice definition of the Standard Model into a detailed proof.</p>
+<p><strong>Why it matters:</strong> Marks OpenAI&#x27;s formal public expansion into automated scientific reasoning, offering early visibility into the capabilities of the GPT-6 model generation for rigorous mathematical and logical problem solving.</p>
+<p><strong>Banking / delivery action:</strong> Track frontier model reasoning capabilities for prospective deployment in complex algorithmic verification, quantitative financial modeling, and risk compliance analysis.</p>
+<p><em>Evidence: Official announcement</em><br>Sources: 
+<a href="https://openai.com/index/step-toward-defining-the-standard-model">OpenAI — 2026-11-15</a> | <a href="https://openai.com/index/our-new-blog-for-science">OpenAI — 2026-11-15</a></p>
+<h4>4. Meta Fined €805 Million in Italy Over Default Mobile Gallery Access</h4>
+<p><strong>What happened:</strong> According to The Hacker News, Italian data protection authority Garante imposed an €805 million fine on Meta over a Facebook Android feature that scanned device photo and video galleries by default without explicit user consent to suggest posts. Meta has 60 days to respond.</p>
+<p><strong>Why it matters:</strong> Underscores aggressive European regulatory enforcement against background data harvesting and automated media processing lacking affirmative, granular consent.</p>
+<p><strong>Banking / delivery action:</strong> Review client-facing mobile banking and wealth applications to ensure all AI-assisted features requesting media, storage, or biometric access operate strictly under explicit, audited opt-in frameworks.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html">The Hacker News — 2026-11-15</a></p>
+<h4>5. Nvidia Leadership Crisis Deepens as Congressional Probe Opens and VCs Brace for Impact</h4>
+<p><strong>What happened:</strong> TechCrunch reported that Jensen Huang resigned as Nvidia CEO following disclosures of personal relationships, including one involving an executive at a firm suspected of diverting chips to China. U.S. Congressional Democrats subsequently launched an investigation into Nvidia&#x27;s export compliance and dealings, while startup founders and venture investors warned of declining valuations and reduced startup investment from Nvidia.</p>
+<p><strong>Why it matters:</strong> Destabilization at the primary supplier of global AI accelerators creates acute uncertainty across enterprise hardware supply chains, sovereign compute initiatives, and startup funding channels.</p>
+<p><strong>Banking / delivery action:</strong> Stress-test enterprise multi-year compute roadmaps against potential delivery bottlenecks and assess financial portfolio exposure to AI infrastructure firms dependent on Nvidia corporate venture capital.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/">TechCrunch AI — 2026-11-13</a> | <a href="https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/">TechCrunch AI — 2026-11-13</a> | <a href="https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/">TechCrunch AI — 2026-11-12</a></p>
+<h4>6. Indian Chip Startup Bharat Semi Secures $24 Million Seed Funding for AI Sensors</h4>
+<p><strong>What happened:</strong> TechCrunch reported that Indian semiconductor startup Bharat Semi raised a $24 million seed round to advance its AI-enabled sensor hardware. The company stated it has secured initial design wins with partners including General Atomics.</p>
+<p><strong>Why it matters:</strong> Reflects the ongoing expansion of specialized, regional AI silicon design outside traditional Tier 1 hardware providers, specifically targeting industrial and defense-adjacent sensing sectors.</p>
+<p><strong>Banking / delivery action:</strong> Monitor regional semiconductor manufacturing and edge-AI startup developments in India as potential investment avenues or supply-chain diversification partners.</p>
+<p><em>Evidence: Reported</em><br>Sources: 
+<a href="https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/">TechCrunch AI — 2026-11-15</a></p>
+<h3>Three things to watch</h3><ol>
+<li>Spread of autonomous agentic cyber campaigns actively hunting for unhardened enterprise LLM gateways and API keys.</li>
+<li>Findings from the U.S. Congressional investigation into Nvidia&#x27;s export controls and trade compliance following CEO Huang&#x27;s resignation.</li>
+<li>Stricter governance and security vetting standards applied to developer IDE extension marketplaces and third-party AI provider tokens.</li>
+</ol><h3>Experiment / proposal</h3>
+<p>Deploy canary API tokens and configure synthetic decoy endpoints across development clusters to benchmark security monitoring against automated AI agent credential hunting.</p>
+<h3>Bottom line</h3>
+<p>Enterprise AI leaders face twin operational challenges: securing expanding AI middleware against automated credential-harvesting agents while preparing contingency plans for volatility in the global AI hardware ecosystem.</p></article></main>
+<footer>Compiled from public RSS headlines and summaries. Source claims are not independently verified. Analysis is editorial.</footer>
+</body>
+</html>
